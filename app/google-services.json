@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "589952494327",
+    "firebase_url": "https://mad-32.firebaseio.com",
+    "project_id": "mad-32",
+    "storage_bucket": "mad-32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589952494327:android:8cd894fa5b688d7d",
+        "android_client_info": {
+          "package_name": "mehedi113.myfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589952494327-jiva7uql53nnfb3dkdph0ffdnj80idf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb7vDuSwYMLf2oeKSNpGJUmOPmx1lbwCw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
