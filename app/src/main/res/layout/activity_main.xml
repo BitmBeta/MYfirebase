@@ -8,15 +8,26 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#1cb9fc"
+    android:background="@drawable/gradient"
 
     >
     <LinearLayout
+        android:paddingTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/b"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="Travel_Mate"/>
         <EditText
             android:id="@+id/emailID"
             android:layout_width="match_parent"
@@ -35,25 +46,28 @@
 
             />
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sign in"
             android:onClick="logInUser"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Login"
             />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Not Sign In Yet"
+            android:textSize="18dp"
             android:textStyle="bold"
-            android:textSize="20dp"
-            android:gravity="center"
+            android:text="Not Register Yet?"
             />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
             android:onClick="SignUpUser"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Sign_Up"
             />
 
         <TextView

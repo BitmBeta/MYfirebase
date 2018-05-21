@@ -40,10 +40,10 @@ public class FragmentSignUp extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment_sign_up, container, false);;
-        emailr = v.findViewById(R.id.emailR);
-        Button btnReg = v.findViewById(R.id.btnReg);
-        passr = v.findViewById(R.id.passwordR);
-        t = v.findViewById(R.id.fragTv);
+        emailr = v.findViewById(R.id.editText2);
+        Button btnReg = v.findViewById(R.id.button);
+        passr = v.findViewById(R.id.editText3);
+       // t = v.findViewById(R.id.fragTv);
         firebaseAuth = FirebaseAuth.getInstance();
 
 
@@ -64,14 +64,16 @@ public class FragmentSignUp extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             firebaseUser = firebaseAuth.getCurrentUser();
-                            t.setText("email id is registered" + firebaseUser.getEmail());
+                           // t.setText("email id is registered" + firebaseUser.getEmail());
+                            Toast.makeText(getActivity(), firebaseUser.getEmail() +" Email id is registered ", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
                 task.addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        t.setText(e.getMessage());
+                      //  t.setText(e.getMessage());
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
