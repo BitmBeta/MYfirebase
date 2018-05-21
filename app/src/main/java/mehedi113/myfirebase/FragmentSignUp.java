@@ -25,9 +25,11 @@ import com.google.firebase.auth.FirebaseUser;
  */
 public class FragmentSignUp extends Fragment {
     private EditText emailr, passr;
+    android.support.v4.app.FragmentManager fm;
+    android.support.v4.app.FragmentTransaction ft;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
-    TextView t;
+
 
 
     public FragmentSignUp() {
@@ -56,7 +58,7 @@ public class FragmentSignUp extends Fragment {
 
                 String e = emailr.getText().toString();
                 String p = passr.getText().toString();
-                t.setText(e+"-"+p);
+             //   t.setText(e+"-"+p);
                 Task<AuthResult> task = firebaseAuth.createUserWithEmailAndPassword(e,p);
 
                 task.addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -66,6 +68,14 @@ public class FragmentSignUp extends Fragment {
                             firebaseUser = firebaseAuth.getCurrentUser();
                            // t.setText("email id is registered" + firebaseUser.getEmail());
                             Toast.makeText(getActivity(), firebaseUser.getEmail() +" Email id is registered ", Toast.LENGTH_SHORT).show();
+
+                            fm = getActivity().getSupportFragmentManager();;
+                            ft = fm.beginTransaction();
+                            Create_Event_fragment fragmentSignUp = new Create_Event_fragment();
+
+                            ft.replace(R.id.fragmentContainer, fragmentSignUp);
+                            ft.addToBackStack(null);
+                            ft.commit();
                         }
                     }
                 });

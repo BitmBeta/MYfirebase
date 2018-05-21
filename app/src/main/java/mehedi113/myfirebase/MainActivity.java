@@ -65,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
 
                     textView.setText("log in as " + user.getEmail());
 
+                    fm = getSupportFragmentManager();
+                    ft = fm.beginTransaction();
+                    Create_Event_fragment create_event_fragment = new Create_Event_fragment();
+
+                    ft.replace(R.id.fragmentContainer, create_event_fragment);
+                    ft.addToBackStack(null);
+                    ft.commit();
+
                 }
             }
         });
@@ -85,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentSignUp fragmentSignUp = new FragmentSignUp();
 
         ft.replace(R.id.fragmentContainer, fragmentSignUp);
+        ft.addToBackStack(null);
         ft.commit();
 
 
