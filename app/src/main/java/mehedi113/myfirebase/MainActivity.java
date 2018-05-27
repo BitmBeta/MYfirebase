@@ -2,6 +2,7 @@ package mehedi113.myfirebase;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -65,13 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
                     textView.setText("log in as " + user.getEmail());
 
-                    fm = getSupportFragmentManager();
-                    ft = fm.beginTransaction();
-                    Create_Event_fragment create_event_fragment = new Create_Event_fragment();
+//                    fm = getSupportFragmentManager();
+//                    ft = fm.beginTransaction();
+//                    Create_Event_fragment create_event_fragment = new Create_Event_fragment();
+//
+//                    ft.replace(R.id.fragmentContainer, create_event_fragment);
+//                    ft.addToBackStack(null);
+//                    ft.commit();
 
-                    ft.replace(R.id.fragmentContainer, create_event_fragment);
-                    ft.addToBackStack(null);
-                    ft.commit();
+                    startActivity(new Intent(MainActivity.this,SecActivity.class));
 
                 }
             }
@@ -88,13 +91,15 @@ public class MainActivity extends AppCompatActivity {
     public void SignUpUser(View view) {
 
 
-        fm = getSupportFragmentManager();
-        ft = fm.beginTransaction();
-        FragmentSignUp fragmentSignUp = new FragmentSignUp();
+//        fm = getSupportFragmentManager();
+//        ft = fm.beginTransaction();
+//        FragmentSignUp fragmentSignUp = new FragmentSignUp();
+//
+//        ft.replace(R.id.fragmentContainer, fragmentSignUp);
+//        ft.addToBackStack(null);
+//        ft.commit();
 
-        ft.replace(R.id.fragmentContainer, fragmentSignUp);
-        ft.addToBackStack(null);
-        ft.commit();
+        startActivity(new Intent(MainActivity.this,SecActivity.class));
 
 
     }
