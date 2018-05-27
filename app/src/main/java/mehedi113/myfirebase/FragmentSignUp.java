@@ -1,6 +1,7 @@
 package mehedi113.myfirebase;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -69,13 +70,14 @@ public class FragmentSignUp extends Fragment {
                            // t.setText("email id is registered" + firebaseUser.getEmail());
                             Toast.makeText(getActivity(), firebaseUser.getEmail() +" Email id is registered ", Toast.LENGTH_SHORT).show();
 
-                            fm = getActivity().getSupportFragmentManager();;
-                            ft = fm.beginTransaction();
-                            Create_Event_fragment fragmentSignUp = new Create_Event_fragment();
-
-                            ft.replace(R.id.fragmentContainer, fragmentSignUp);
-                            ft.addToBackStack(null);
-                            ft.commit();
+//                            fm = getActivity().getSupportFragmentManager();;
+//                            ft = fm.beginTransaction();
+//                            Create_Event_fragment fragmentSignUp = new Create_Event_fragment();
+//
+//                            ft.replace(R.id.fragmentContainer, fragmentSignUp);
+//                            ft.addToBackStack(null);
+//                            ft.commit();
+                            startActivity(new Intent(getActivity(),SecActivity.class));
                         }
                     }
                 });

@@ -91,15 +91,15 @@ public class MainActivity extends AppCompatActivity {
     public void SignUpUser(View view) {
 
 
-//        fm = getSupportFragmentManager();
-//        ft = fm.beginTransaction();
-//        FragmentSignUp fragmentSignUp = new FragmentSignUp();
-//
-//        ft.replace(R.id.fragmentContainer, fragmentSignUp);
-//        ft.addToBackStack(null);
-//        ft.commit();
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        FragmentSignUp fragmentSignUp = new FragmentSignUp();
 
-        startActivity(new Intent(MainActivity.this,SecActivity.class));
+        ft.replace(R.id.fragmentContainer, fragmentSignUp);
+        ft.addToBackStack(null);
+        ft.commit();
+
+
 
 
     }
